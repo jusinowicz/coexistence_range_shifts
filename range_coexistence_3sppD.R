@@ -70,15 +70,15 @@ a_rr=c(1,1,1)
 
 
 	# 2. Ds
-	#Ds = c(np^2/1600, np^2/1600,np^2/1600)
-	Ds = c(np^2/100, np^2/100,np^2/100)
+	Ds = c(np^2/1600, np^2/1600,np^2/1600)
+	#Ds = c(np^2/100, np^2/100,np^2/100)
 
 	#Ds.end = c(np^2/50, np^2/1600,np^2/1600); f.name3=c("_var")
-	#Ds.end = c(np^2/1600, np^2/1600,np^2/1600); f.name3=c("_novar")
-	Ds.end = c(np^2/100, np^2/100,np^2/100); f.name3=c("_novar")
+	Ds.end = c(np^2/1600, np^2/1600,np^2/1600); f.name3=c("_novar")
+	#Ds.end = c(np^2/100, np^2/100,np^2/100); f.name3=c("_novar")
 
 
-	# 3. bys
+	# 3. bys -- These are essentially the rate of environmental change.
 	 # fast.bys = FALSE; f.name4=c("_norm")
 	 # peaks.by=c( (abs(peaks[1]-peaks.end[1])/ngens ), (abs(peaks[2]-peaks.end[2])/ngens),(abs(peaks[3]-peaks.end[3])/ngens) )
 	 # Ds.by = c( (abs(Ds[1]-Ds.end[1])/ngens), (abs(Ds[2]-Ds.end[2])/ngens),(abs(Ds[3]-Ds.end[3])/ngens) )
@@ -90,7 +90,8 @@ a_rr=c(1,1,1)
 	iconfig=iconfig+1 #Need at least 2 initial runs.
 	ngens=5
 	ngenst=iconfig+ngens
-	dnwidth=3#floor((np/2)/deltaE)
+	#Use this to control the rate of environmental change
+	dnwidth=5#floor((np/2)/deltaE)
 	peaks.by=c((abs(peaks.end[1]-peaks[1])/dnwidth),(abs(Ds[2]-Ds.end[2])/ngens),(abs(Ds[3]-Ds.end[3])/ngens) )
 	Ds.by = c( (abs(Ds[1]-Ds.end[1])/ngens), (abs(Ds[2]-Ds.end[2])/ngens),(abs(Ds[3]-Ds.end[3])/ngens) )
 

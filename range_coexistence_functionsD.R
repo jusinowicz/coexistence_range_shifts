@@ -195,7 +195,7 @@ return(Fr.tmp)
 
 #Calculate the population spread rate from an IGR. This is based on
 #the math from Neubert and Caswell 00, but originating with Weinberger 78, 
-#and Kot 92 
+#and Kot 92. 
 
 get.spread.rate = function(gr1.fast,a_rr,sr) {
 	u=seq(0,.1,0.0001)
